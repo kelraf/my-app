@@ -1,0 +1,42 @@
+{% extends 'layout.htm' %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+            <div class="row mt-3">
+                <div class="col-md-12 text-center">
+                    <h2>Create Your Bucketlist</h2>
+                </div>
+            </div>
+
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-5">
+                    <form action="/create_bucketlist" method="POST">
+                        <div class="form-group">
+                            <label for="Bucketlist Name">Bucketlist Name</label>
+                            <input type="text" class="form-control" name="bucketlist_name" required placeholder="Enter Bucketlist Name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for=" about">Bucketlist Title</label>
+                            <input type="text" class="form-control" name="about" required placeholder="Enter Bucketlist Title">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="content">Bucketlist Content</label>
+                            <input type="text" class="form-control" name="content" required placeholder="Enter Bucketlist Content">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="created_by">Who Created Bucketlist</label>
+                            <input type="text" class="form-control" placeholder="Who Create Bucketlist" name="created_by" required>
+                        </div>
+
+                        <input type="submit" class="btn btn-success" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

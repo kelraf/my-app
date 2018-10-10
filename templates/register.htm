@@ -1,0 +1,48 @@
+{% extends 'layout.htm' %}
+
+{% block content %}
+
+    <div class="container mt-5">
+
+        <div class="row mt-3">
+            <div class="col-md-12 text-center">
+                <h2>Register Here</h2>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-md-5">
+                <form action="/register" method="POST">
+                    <div class="form-group">
+                        <label for="UserName">Your UserName</label>
+                        <input type="text" class="form-control" name="username" required placeholder="Enter Your UserName">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" class="form-control" name="email" required placeholder="Enter Your Email">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Your Password</label>
+                        <input type="password" class="form-control" name="password" required placeholder="Enter Your Password">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirm password">Confirm Your Password</label>
+                        <input type="password" class="form-control" placeholder="Confirm Your Password" name="confirm_password" required>
+                    </div>
+
+                    <input type="submit" class="btn btn-success" value="Submit">
+                </form>
+            </div>
+        </div>
+
+        <div class="row mt-3 ml-5">
+            <div class="col-md-6 offset-3">
+                <p>Already have an account <span><a href="{{ url_for('login') }}">  login  </a></span>insteade</p>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
